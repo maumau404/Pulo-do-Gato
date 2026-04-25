@@ -1,5 +1,42 @@
-*{
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+}
+
+.container {
+    display: grid;
+    /* align-content: center; */
+    height: 100vh;
+    width: 100%;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas:
+        'nav nav nav nav'
+        'aside section section section'
+        'footer footer footer footer';
+}
+
+nav {
+    grid-area: nav;
+    background-color: aqua;
+}
+
+aside {
+    grid-area: aside;
+    background-color: brown;
+}
+
+section {
+    grid-area: section;
+    background-color: blueviolet;
+}
+
+footer {
+    grid-area: footer;
+    background-color: chocolate;
 }
