@@ -4,6 +4,8 @@
     --azul:#4bb0df;
     --preto:#0d0d0e;
     --amareloPrimary:#b6b03e;
+    --amareloOuro:#ffd965;
+    --amareloMedio:#ffcd36;
     --brancoPrimary:#f5f1f1;
 }
 
@@ -44,7 +46,7 @@ nav {
     align-items:center;
     height: 8rem;
     width: 100%;
-    background-color: var(--azul);
+    background-color: var(--amareloOuro);
     border-radius: 0rem 0rem 9rem 9rem;
     
 }
@@ -91,7 +93,7 @@ footer {
     align-items: center; 
 }
 .logo h1{
-    color: #f0d802;
+    color: var(--azulM);
 }
 
 .lista_nav{
