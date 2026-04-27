@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Boa dica</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="assets/LOGO.png" type="image/png">
     <link rel="stylesheet" href="styles.css">
 
 </head>
@@ -47,7 +49,7 @@
                 <ul class="lista_aside">
 
                     <li><a href="#">Pesquisa de preços</a></li>
-                    <li><a href="#">Perstadores de Serviços</a></li>
+                    <li><a href="#">Prestadores de Serviços</a></li>
                     <li><a href="#">Como funciona</a></li>
                     <li><a href="#">Indique este site</a></li>
                     <li><a href="#">Dúvidas</a></li>
@@ -55,13 +57,16 @@
                 </ul>
 
             </div>
-            
+
         </aside>
 
         <!-- Corpo do site -->
 
         <!-- todos os cards do site -->
         <section>
+
+            <button id="prevBtn" class="btn-seta btn-prev">❮</button>
+
             <div class="container_cards">
                 <div class="cards">
 
@@ -166,7 +171,36 @@
                     </div>
 
                 </div>
+
+                <div class="cards">
+
+                    <div class="cabecalho_card5">
+
+                        <img src="assets/icons8-multimedia-64.png" alt=" icon cumputer">
+                        <h1>Multimídia</h1>
+
+                    </div>
+
+                    <div class="lista_card5">
+
+                        <ul>
+                            <li><a href="#">Caixas de Som</a></li>
+                            <li><a href="#">Câmeras e webcam</a></li>
+                            <li><a href="#">Carregadores e Baterias</a></li>
+                            <li><a href="#">Headphones e Microfones</a></li>
+                            <li><a href="#">Joysticks e Gamepads</a></li>
+                            <li><a href="#">Placas de Som</a></li>
+                            <li><a href="#">Placas de Vídeo/edição</a></li>
+                            <li><a href="#">Projetores e telas</a></li>
+                        </ul>
+
+                    </div>
+
+                </div>
+
             </div>
+
+            <button id="nextBtn" class="btn-seta btn-next">❯</button>
 
         </section>
 
@@ -187,6 +221,9 @@
 
         </footer>
     </main>
+
+    <script src="carrossel.js"></script>
+
 </body>
 
 </html>
