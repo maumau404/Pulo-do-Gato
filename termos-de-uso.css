@@ -1,0 +1,49 @@
+:root {
+    --azulF: #00509D; /* Azul encorpado e vivo */
+    --azulM: #007AFF; /* Azul "Apple" - elétrico e clicável */
+    --azul:  #8AC4FF; /* Azul claro de apoio */
+    --preto: #1C1C1E; /* Cinza muito escuro e neutro */
+    --amareloPrimary: #FFCC00; /* Amarelo bem "aceso" e alegre */
+    --brancoPrimary: #FFFFFF; /* Branco 100% puro */
+    --texto-principal: #1C1C1E;
+    --texto-titulo: #003366;
+}
+
+.section_termos{
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    padding-top: 2rem;
+}
+
+.cabecalho{
+    width: 100%;
+    padding-left: 1rem;
+    background-color: var(--azulF);
+    color: var(--brancoPrimary);
+
+    h1{
+       color: var(--brancoPrimary);
+       font-size: 1.9rem;
+    }
+}
+
+
+/* Estilização da aba imprensa */
+
+.lorem h1{
+    font-size: 1.8rem;
+    text-align: center;
+    padding-bottom: 1rem;
+}
+
+/* Estilização da aba Contato */
+
+.section_termos .subtexto_contato h2{
+    font-size: 2rem;
+}
+
+.section_termos .subtexto_contato p{
+    font-size: 1.5rem;
+}
+
