@@ -9,41 +9,88 @@
     --texto-titulo: #003366;
 }
 
-.section_termos{
+/* CORREÇÃO PARA O TEXTO NÃO SUMIR NO MOBILE */
+.section_termos {
+    grid-area: section; /* Garante o encaixe no grid */
     display: flex;
     flex-direction: column;
-    gap: 5rem;
-    padding-top: 2rem;
+    justify-content: flex-start;
+    gap: clamp(2rem, 5vw, 5rem); /* Distância responsiva entre os blocos */
+    padding: 2rem;
+    
+    /* Ativa a rolagem vertical interna caso o texto ultrapasse o tamanho da tela */
+    overflow-y: auto; 
+    height: 100%;
+    min-height: 0; /* Evita quebras de layout no CSS Grid */
+    
+    /* Configuração opcional de uma barra de rolagem sutil */
+    scrollbar-width: thin;
 }
 
-.cabecalho{
+/* Customização da barra de rolagem (Chrome, Edge, Safari) */
+.section_termos::-webkit-scrollbar {
+    width: 6px;
+}
+.section_termos::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.05);
+}
+.section_termos::-webkit-scrollbar-thumb {
+    background: var(--azulF);
+    border-radius: 10px;
+}
+
+/* CABEÇALHO COM FONTE RESPONSIVA CLAMP */
+.cabecalho {
     width: 100%;
-    padding-left: 1rem;
+    padding: 1.5rem 1rem;
     background-color: var(--azulF);
     color: var(--brancoPrimary);
+    border-radius: 0.8rem;
 
-    h1{
+    h1 {
        color: var(--brancoPrimary);
-       font-size: 1.9rem;
+       /* Mínimo: 1.6rem | Ideal: 2.5vw + 1rem | Máximo: 2.2rem */
+       font-size: clamp(1.6rem, 2.5vw + 1rem, 2.2rem);
+       line-height: 1.3;
     }
 }
 
+/* TEXTOS INSTITUCIONAIS (LOREM) COM FONTE RESPONSIVA CLAMP */
+.lorem {
+    /* Mínimo: 1.35rem | Ideal: 1vw + 1rem | Máximo: 1.6rem */
+    font-size: clamp(1.35rem, 1vw + 1rem, 1.6rem);
+    line-height: 1.6;
+    color: var(--texto-principal);
+}
 
 /* Estilização da aba imprensa */
-
-.lorem h1{
-    font-size: 1.8rem;
+.lorem h1 {
+    font-size: clamp(1.8rem, 3vw + 1rem, 2.4rem);
     text-align: center;
     padding-bottom: 1rem;
 }
 
+.lorem p{
+   font-size: clamp(1rem, 3vw + 1rem, 1.4rem); 
+}
+
 /* Estilização da aba Contato */
-
-.section_termos .subtexto_contato h2{
-    font-size: 2rem;
+.section_termos .subtexto_contato h2 {
+    font-size: clamp(1.6rem, 2.5vw + 1rem, 2.2rem);
+    margin-bottom: 1rem;
 }
 
-.section_termos .subtexto_contato p{
-    font-size: 1.5rem;
+.section_termos .subtexto_contato p {
+    font-size: clamp(1.35rem, 1vw + 1rem, 1.6rem);
+    line-height: 1.6;
 }
 
+.section_termos .subtexto_contato p a {
+    color: var(--azulM);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.section_termos .subtexto_contato p a:hover {
+    text-decoration: underline;
+}
