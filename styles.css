@@ -27,8 +27,10 @@ body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
     font-size: 1.6rem;
     color: var(--texto-principal);
+    /* aqui tema dark */
     background-color: var(--brancoPrimary);
     overflow: hidden;
+    
 }
 
 /* CONTAINER RESPONSIVO */
@@ -143,6 +145,7 @@ aside {
     /* justify-content: center; */
     align-items: flex-start;
     padding: 3rem 1rem;
+    /* aqui tema dark */
     background-color: #f0f2f5;
     position: relative;
     gap: 1.5rem;
@@ -166,7 +169,9 @@ aside::before {
     max-width: 21.6rem;
     padding: 1rem;
     border-radius: 1.5rem;
+    /* aqui tema dark */  
     background-color: var(--brancoPrimary);
+    
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
     border: 1px solid rgba(0, 0, 0, 0.05);
 }
@@ -226,6 +231,7 @@ section {
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+    /* aqui tema dark */
     background-color: var(--brancoPrimary);
     padding: 0 6rem;
     overflow: hidden;
@@ -664,4 +670,164 @@ a {
         text-align: center;
         opacity: 0.9;
     }
+}
+
+/* ==========================================================================
+   CHAVE SELETORA DE TEMA (TOGGLE SWITCH ARREDONDADO)
+   ========================================================================== */
+
+/* Alinha o texto "Tema" e o botão lado a lado na navegação */
+.item-tema {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    font-size: 1.4rem;
+}
+
+/* Container que define a proporção da pista do switch */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 4.4rem;
+    height: 2.4rem;
+}
+
+/* Esconde o (checkbox) do navegador */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* Desenha a Pista do Switch (Visual padrão no Modo Claro) */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s ease;
+    border-radius: 2.4rem;
+}
+
+/* Desenha a Bolinha interna móvel do switch */
+.slider::before {
+    position: absolute;
+    content: "";
+    height: 1.8rem;
+    width: 1.8rem;
+    left: 0.3rem;
+    bottom: 0.3rem;
+    background-color: #ffffff;
+    transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Quando o checkbox for marcado, a pista fica Azul */
+input:checked + .slider {
+    background-color: #555758;
+}
+
+/* Quando o checkbox for marcado, move a bolinha para a direita */
+input:checked + .slider::before {
+    transform: translateX(2rem);
+}
+
+
+/* ==========================================================================
+   PALETA PARA O MODO ESCURO (DARK MODE)
+   ========================================================================== */
+
+/* FUNDO GERAL */
+body.dark-mode,
+body.dark-mode aside,
+body.dark-mode section,
+body.dark-mode .section_termos,
+body.dark-mode footer {
+    background-color: #181a1b !important;
+    color: #f5f6f7 !important; /* Texto branco gelo confortável */
+}
+
+/* TEXTOS E LINKS (Força absolutamente TODOS os textos e parágrafos a ficarem claros) */
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode p,
+body.dark-mode span,
+body.dark-mode li a,
+body.dark-mode .item-tema,
+body.dark-mode .lorem,
+body.dark-mode .lorem p,
+body.dark-mode .subtexto_contato,
+body.dark-mode .subtexto_contato p {
+    color: #f5f6f7 !important;
+}
+
+/* Ajuste nos links internos dos cards e do rodapé para não sumirem no escuro */
+body.dark-mode .cards li a,
+body.dark-mode .lista_footer li a {
+    color: #f5f6f7 !important;
+}
+body.dark-mode .cards li a:hover,
+body.dark-mode .lista_footer li a:hover {
+    color: #ffe066 !important;
+}
+
+/* Faz a pista desativada do switch ficar cinza-escura no Dark Mode */
+body.dark-mode .slider {
+    background-color: #1c1e1f;
+}
+body.dark-mode input:checked + .slider {
+    background-color: #2d3134 !important;
+}
+
+/* CAIXA LATERAL DE LINKS */
+body.dark-mode .container_aside {
+    background-color: #242729 !important;
+    border: 1px solid #2d3134 !important;
+}
+body.dark-mode .lista_aside li a {
+    color: #f5f6f7 !important;
+}
+
+/* CARDS (Fundo escuro) */
+body.dark-mode .cards {
+    background-color: #181a1b !important;
+    box-shadow: none !important;
+    border: 1px solid #313537 !important;
+}
+body.dark-mode [class^="cabecalho_card"] h1 {
+    color: #ffffff !important;
+}
+
+/* BARRA DE PESQUISA */
+body.dark-mode #formulario input {
+    background-color: #181a1b !important;
+    border: 2px solid #313537 !important;
+    color: #ffffff !important;
+}
+body.dark-mode #formulario input::placeholder {
+    color: #727b80 !important;
+}
+
+/* BOTÕES DO CARROSSEL (Setas Esquerda e Direita escuras) */
+body.dark-mode .btn-seta {
+    background-color: #2d3134 !important;
+    color: #ffffff !important;
+    border: 1px solid #3d4246 !important;
+}
+body.dark-mode .btn-seta:hover {
+    background-color: var(--azulM) !important;
+}
+
+/* AJUSTES NAS PÁGINAS SECUNDÁRIAS */
+body.dark-mode .cabecalho {
+    background-color: #242729 !important; 
+    border: 1px solid #313537 !important;
+}
+
+/* AMARELO DO HEADER ADAPTADO PARA O MODO ESCURO */
+/* Altera o amarelo da logo */
+body.dark-mode nav .logo h1 span {
+    color: #ffe066 !important;
+    text-shadow: 0px 0px 8px rgba(255, 224, 102, 0.2);
 }

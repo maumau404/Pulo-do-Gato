@@ -4,16 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Boa dica</title>
+    <title>Pulo do Gato</title>
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Poppins:wght@400;600;700&display=swap"
         rel="stylesheet">
 
+
     <link href="https://fonts.googleapis.com/css2?family=Asimovian&display=swap" rel="stylesheet">
 
     <link rel="icon" href="assets/LOGO.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="termos-de-uso.css">
 
 </head>
 
@@ -71,49 +72,89 @@
 
             </div>
 
+            <div class="anuncio">
+                <img class="anuncioft" src="assets/anuncie-1024x397.jpg" alt="">
+            </div>
+
         </aside>
 
         <!-- Corpo do site -->
 
         <!-- todos os cards do site -->
-        <section class="section_termos">
+        <section>
+            <!-- Barra de pesquisa -->
+            <form id="formulario" action="#">
+                <div class="posicao_form">
+                    <input type="text" placeholder="Buscar">
 
-            <div class="cabecalho">
-                <h1>Imprensa</h1>
+                    <i class="fa-solid fa-magnifying-glass" style="color: rgb(116, 192, 252);"></i>
+                </div>
+            </form>
+
+            <!-- Botoes do carrossel -->
+            <button id="prevBtn" class="btn-seta btn-prev">❮</button>
+
+            <div class="container_cards">
+                <div class="cards">
+
+                    <div class="cabecalho_card1">
+                        <h1>Intel</h1>
+                    </div>
+
+                    <div class="lista_card1">
+
+
+
+                        <ul>
+                            <li><a href="#">Intel Core i3</a></li>
+                            <li><a href="#">Intel Core i5</a></li>
+                            <li><a href="#">Intel Core i7</a></li>
+                            <li><a href="#">Intel Core i9</a></li>
+                            <li><a href="#">Intel Core Ultra</a></li>
+                            <li><a href="#">Intel Celeron</a></li>
+                            <li><a href="#">Pentium Gold</a></li>
+                        </ul>
+
+                    </div>
+
+
+                </div>
+
+                <div class="cards">
+
+                    <div class="cabecalho_card2">
+
+                        <h1>AMD</h1>
+
+                    </div>
+
+                    <div class="lista_card2">
+
+                        <ul>
+
+                            <li><a href="#">AMD Ryzen (Todos)</a></li>
+                            <li><a href="#">AMD Ryzen 3</a></li>
+                            <li><a href="#">AMD Ryzen 5</a></li>
+                            <li><a href="#">AMD Ryzen 7</a></li>
+                            <li><a href="#">AMD Ryzen 9</a></li>
+                            <li><a href="#">PC Gamer</a></li>
+
+                        </ul>
+
+                    </div>
+
+                </div>
+
             </div>
 
-            <div class="lorem">
 
-                <h1>Área de Informações da Imprensa e para a Imprensa</h1>
-
-                <p>O BoaDica entrou no ar em 7 de Setembro de 1999. Nos primeiros 30 dias alcançamos a marca de 70.000
-                    page-views, mostrando o potencial do nosso site/serviço. Hoje em dia estamos consolidados onde
-                    também se expandiu sua pesquisa de preços para o ambiente de internet móvel, oferecendo aplicativo
-                    específico para ter sua pesquisa acessada também por celulares Android e iPhone.
-
-                    Os usuários quando acessam o BoaDica, tem a certeza de encontrar uma pesquisa idônea, pesquisa esta
-                    realizada através de páginas simples, diretas e rápidas, no nosso Banco de dados atualizado
-                    constantemente.
-
-                    É importante ressaltar que o BoaDica é um site de INFORMAÇÃO, ou seja, não vendemos nem
-                    intermediamos venda de nenhum tipo de produto, mas sim fornecemos vários tipos de informação de
-                    forma a auxiliar na seleção de em qual loja realizar a compra de produtos de informática.
-
-                    O BoaDica não possui loja ou qualquer tipo de parceria ou sociedade com lojas ou distribuidores de
-                    informática, onde os preços são TOTALMENTE definidos pelos próprios lojistas sem nenhuma
-                    interferência do BoaDica, e sem receber comissões de venda de produtos pela loja, nem sabendo se
-                    realizou ou não alguma venda.
-
-                    A pesquisa de preços tem um grande diferencial que é mostrar os preços praticados na "rua" e não os
-                    preços que se encontram na internet (se verificar em outros sites de pesquisa de preço, verá que os
-                    preços aqui no BoaDica são sensivelmente mais baratos), além de ter atualizações diárias.
-
-                    Com certeza é um site para ter sempre nos favoritos e de vez em quando dar uma passada para se
-                    atualizar sobre como andam as coisa na área de informática...</p>
             </div>
-
+            <!-- Botoes do carrossel -->
+            <button id="nextBtn" class="btn-seta btn-next">❯</button>
 
         </section>
+
+
 
         <footer>
 
