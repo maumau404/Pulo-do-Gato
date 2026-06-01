@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pulo do Gato</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Poppins:wght@400;600;700&display=swap"
+        rel="stylesheet">
+
+
+    <link href="https://fonts.googleapis.com/css2?family=Asimovian&display=swap" rel="stylesheet">
+
+    <link rel="icon" href="assets/LOGO.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+
+    <main class="container">
+        <!-- menu superior -->
+        <nav>
+
+            <div class="logo">
+                <!-- imagem da logo -->
+                <a href="index.html"><img src="assets/LOGO.png" alt=""></a>
+
+                <h1>www.<span>P</span>ulo<br>Do<span>G</span>ato.com</h1>
+            </div>
+
+            <!-- menu ul li -->
+            <div class="lista_nav">
+
+                <ul>
+
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="#">Lista de Compras</a></li>
+                    <li><a href="serviços.html">Serviços</a></li>
+                    <li><a href="#">Usados</a></li>
+                    <li><a href="publicidade.html">Publicidade</a></li>
+
+                    <li class="item-tema">
+                        <span>Tema Dark</span>
+                        <label class="switch">
+                            <input type="checkbox" id="botao-dark">
+                            <span class="slider"></span>
+                        </label>
+                    </li>
+
+                    <!-- <li class="item-tema">
+                        <span>Tema</span>
+                        <label class="switch">
+                            <input type="checkbox" id="botao-dark" onclick="temadark()">
+                            <span class="slider"></span>
+                        </label>
+                    </li> -->
+
+                </ul>
+
+            </div>
+
+        </nav>
+
+        <!-- Menu lateral esquerda -->
+        <aside>
+
+            <div class="container_aside">
+
+                <ul class="lista_aside">
+
+                    <li><a href="#">Pesquisa de preços</a></li>
+                    <li><a href="#">Prestadores de Serviços</a></li>
+                    <li><a href="#">Como funciona</a></li>
+                    <li><a href="#">Indique este site</a></li>
+                    <li><a href="duvidas.html">Dúvidas</a></li>
+
+                </ul>
+
+            </div>
+
+            <div class="anuncio">
+                <img class="anuncioft" src="assets/anuncie-1024x397.jpg" alt="">
+            </div>
+
+        </aside>
+
+        <!-- Corpo do site -->
+
+        <!-- toda pesquisa do site -->
+        <section class="section_fornecedores">
+
+            <div class="fornecedores_busca">
+                <h2>Encontre seu fornecedor</h2>
+                <form class="form_fornecedores" action="#">
+
+                    <div class="form_linha">
+                        <div class="form_group_fornecedores flex_2">
+                            <label for="pesquisa_item">Pesquisa</label>
+                            <input type="text" id="pesquisa_item" placeholder="Ex: Processador, Memória, Monitor...">
+                        </div>
+
+                        <div class="form_group_fornecedores">
+                            <label for="categoria">Categoria</label>
+                            <select id="categoria">
+                                <option value="" disabled selected>Selecione</option>
+                                <option value="hardware">Hardware / Peças</option>
+                                <option value="perifericos">Periféricos</option>
+                                <option value="monitores">Monitores</option>
+                                <option value="notebooks">Notebooks</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form_linha">
+                        <div class="form_group_fornecedores">
+                            <label for="regiao">Região / Estado</label>
+                            <select id="regiao">
+                                <option value="rj" selected>Rio de Janeiro</option>
+                                <option value="sp">São Paulo</option>
+                                <option value="mg">Minas Gerais</option>
+                            </select>
+                        </div>
+
+                        <div class="form_group_fornecedores">
+                            <label for="bairro">Bairro / Zona</label>
+                            <select id="bairro">
+                                <option value="todos" selected>Todos os bairros</option>
+                                <option value="centro">Centro</option>
+                                <option value="copacabana">Copacabana</option>
+                                <option value="barra">Barra da Tijuca</option>
+                                <option value="tijuca">Tijuca</option>
+                            </select>
+                        </div>
+
+                        <div class="form_group_fornecedores">
+                            <label for="pagamento">Pagamento</label>
+                            <select id="pagamento">
+                                <option value="todos" selected>Qualquer forma</option>
+                                <option value="dinheiro">Dinheiro / Pix (Desconto)</option>
+                                <option value="cartao">Cartão de Crédito</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form_linha alinhamento_fim">
+                        <div class="form_group_fornecedores campo_preco">
+                            <label>Faixa de Preço (R$)</label>
+                            <div class="inputs_preco">
+                                <input type="number" id="preco_min" placeholder="Mín">
+                                <span>até</span>
+                                <input type="number" id="preco_max" placeholder="Máx">
+                            </div>
+                        </div>
+
+                        <div class="form_group_fornecedores">
+                            <label for="ordenacao">Ordenar por</label>
+                            <select id="ordenacao">
+                                <option value="menor_preco" selected>Menor Preço</option>
+                                <option value="maior_preco">Maior Preço</option>
+                                <option value="relevancia">Relevância / Destaque</option>
+                            </select>
+                        </div>
+
+                        <button type="submit" class="btn_encontrar">
+                            <i class="fa-solid fa-magnifying-glass"></i> Encontrar
+                        </button>
+                    </div>
+
+                </form>
+            </div>
+
+
+            <div class="fornecedores_destaque">
+                <div class="tabela_responsiva_container">
+                    <table class="tabela_fornecedores">
+                        <thead>
+                            <tr>
+                                <th>Fabricante</th>
+                                <th>Modelo</th>
+                                <th>Especificação</th>
+                                <th>Preço</th>
+                                <th>Vendedor</th>
+                                <th>Local</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="col_fabricante">Intel</td>
+                                <td class="col_modelo">
+                                    <a href="#" class="link_modelo nome_loja_link">Core i5-12400F</a>
+                                </td>
+                                <td class="col_especificacao">
+                                    2.5GHz (4.4GHz Turbo), 12MB Cache, LGA1700, Box (sem vídeo integrado)
+                                </td>
+                                <td class="col_preco">
+                                    <span class="preco_num">R$ 685,00</span>
+                                    <span class="preco_info total_votos">Dinheiro/Pix</span>
+                                </td>
+                                <td class="col_vendedor">
+                                    <a href="#" class="link_vendedor nome_loja_link">Mega Tech</a>
+                                    <div class="vendedor_contato">3333-4444</div>
+                                </td>
+                                <td class="col_local">
+                                    <span class="bairro_txt">Centro</span>
+                                    <a href="#" class="btn_ver_mapa"><i class="fa-solid fa-location-dot"></i> Mapa</a>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td class="col_fabricante">AMD</td>
+                                <td class="col_modelo">
+                                    <a href="#" class="link_modelo nome_loja_link">Ryzen 5 5600G</a>
+                                </td>
+                                <td class="col_especificacao">
+                                    3.9GHz (4.4GHz Max Turbo), 19MB Cache, AM4, com vídeo Radeon Graphics
+                                </td>
+                                <td class="col_preco">
+                                    <span class="preco_num">R$ 720,00</span>
+                                    <span class="preco_info total_votos">Dinheiro/Pix</span>
+                                </td>
+                                <td class="col_vendedor">
+                                    <a href="#" class="link_vendedor nome_loja_link">Top Som</a>
+                                    <div class="vendedor_contato">3333-4444</div>
+                                </td>
+                                <td class="col_local">
+                                    <span class="bairro_txt">Barra</span>
+                                    <a href="#" class="btn_ver_mapa"><i class="fa-solid fa-location-dot"></i> Mapa</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </section>
+
+
+
+        <footer>
+
+            <ul class="lista_footer">
+
+                <li><a href="termos-de-uso.html" target="_blank">Termos de Uso</a></li>
+                <li><a href="contato.html">Contato</a></li>
+                <li><a href="privacidade.html">Privacidade</a></li>
+                <li><a href="imprensa.html">Imprensa</a></li>
+
+            </ul>
+
+            <p>Todos os direitos reservados &copy 2026</p>
+
+        </footer>
+    </main>
+
+    <script src="carrossel.js"></script>
+    <script src="temadark.js"></script>
+
+</body>
+
+</html>

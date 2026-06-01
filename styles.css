@@ -831,3 +831,404 @@ body.dark-mode nav .logo h1 span {
     color: #ffe066 !important;
     text-shadow: 0px 0px 8px rgba(255, 224, 102, 0.2);
 }
+
+
+/* ==========================================================================
+   ESTILOS DA PÁGINA DE FORMULÁRIO E TABELA
+   ========================================================================== */
+
+.section_fornecedores {
+    grid-area: section;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding: 2rem;
+    overflow-y: auto;
+    height: 100%;
+    min-height: 0;
+}
+
+/* Containers Principais */
+.fornecedores_busca,
+.fornecedores_destaque {
+    background-color: var(--brancoPrimary);
+    padding: 2.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.fornecedores_busca h2, 
+.fornecedores_destaque h2 {
+    font-size: 2.2rem;
+    color: var(--preto);
+    font-weight: 700;
+    margin-bottom: 2rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Estrutura do Formulário */
+.form_fornecedores {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.form_linha {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.form_linha.alinhamento_fim {
+    align-items: flex-end;
+}
+
+.form_group_fornecedores {
+    flex: 1;
+    min-width: 180px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.form_group_fornecedores.flex_2 {
+    flex: 2;
+    min-width: 280px;
+}
+
+.form_group_fornecedores label {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--preto);
+    font-family: 'Inter', sans-serif;
+}
+
+.form_group_fornecedores select,
+.form_group_fornecedores input[type="text"] {
+    width: 100%;
+    padding: 1.2rem 1.5rem;
+    font-size: 1.4rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background-color: var(--brancoPrimary);
+    color: var(--preto);
+    font-family: 'Inter', sans-serif;
+    outline: none;
+    transition: border-color 0.2s ease;
+}
+
+.form_group_fornecedores select:focus,
+.form_group_fornecedores input:focus {
+    border-color: var(--azulM);
+}
+
+/* Filtro de Preço (Mín / Máx) */
+.campo_preco {
+    min-width: 240px;
+}
+
+.inputs_preco {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.inputs_preco input {
+    width: 100%;
+    padding: 1.2rem;
+    font-size: 1.4rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background-color: var(--brancoPrimary);
+    color: var(--preto);
+    outline: none;
+    text-align: center;
+}
+
+.inputs_preco span {
+    font-size: 1.4rem;
+    color: var(--preto);
+    font-family: 'Inter', sans-serif;
+}
+
+/* Botão Encontrar */
+.btn_encontrar {
+    padding: 1.2rem 3.5rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    background-color: var(--azulF);
+    color: var(--brancoPrimary);
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-family: 'Inter', sans-serif;
+    transition: background-color 0.2s ease;
+    height: 47px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.btn_encontrar:hover {
+    background-color: var(--azulM);
+}
+
+/* ==========================================================================
+   ESTILIZAÇÃO DA TABELA
+   ========================================================================== */
+
+.tabela_fornecedores {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: 'Inter', sans-serif;
+    font-size: 1.4rem;
+    border: 1px solid var(--azulM); 
+}
+
+/* Cabeçalho da tabela */
+.tabela_fornecedores thead th {
+    background-color: var(--azulM);
+    color: var(--brancoPrimary);
+    font-weight: 600;
+    text-align: left;
+    padding: 1.4rem 1.8rem;
+    font-size: 1.5rem;
+    letter-spacing: 0.5px;
+}
+
+.tabela_fornecedores tbody td {
+    padding: 2rem 1.8rem;
+    /* Borda azul sutil dividindo as linhas de dados */
+    border-bottom: 1px solid rgba(0, 122, 255, 0.2); 
+    color: var(--preto);
+    vertical-align: middle;
+}
+
+/* Linhas alternadas em modo claro */
+.tabela_fornecedores tbody tr:nth-child(even) {
+    background-color: #f8fafc;
+}
+
+/* Nome da Loja */
+.col_loja {
+    width: 25%;
+}
+
+.nome_loja_link {
+    font-weight: 700;
+    font-size: 1.6rem;
+    color: var(--azulF);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.nome_loja_link:hover {
+    text-decoration: underline;
+    color: var(--azulM);
+}
+
+/* Contatos Estruturados */
+.col_contato {
+    width: 50%;
+}
+
+.container_contato_dados {
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+    margin-bottom: 0.8rem;
+    flex-wrap: wrap;
+}
+
+.telefone_principal {
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: var(--preto);
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.telefone_principal i {
+    color: #4a5568;
+}
+
+/* Caixinha do WhatsApp com os celulares do lado */
+.caixa_whats_celulares {
+    display: inline-flex;
+    align-items: center;
+    background-color: #edf2f7;
+    padding: 0.6rem 1.2rem;
+    border-radius: 6px;
+    gap: 1rem;
+    border: 1px solid #cbd5e0;
+}
+
+.icone_wpp {
+    color: #25D366;
+    font-size: 2rem;
+}
+
+.numeros_celular {
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: #2d3748;
+    line-height: 1.4;
+}
+
+.linha_email {
+    font-size: 1.3rem;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    color: #718096;
+}
+
+.linha_email a {
+    color: var(--azulM);
+    text-decoration: none;
+}
+
+.linha_email a:hover {
+    text-decoration: underline;
+}
+
+/* Bloco de Avaliação Centralizado */
+.col_aval {
+    width: 25%;
+    text-align: left;
+}
+
+.wrapper_estrelas_nota {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.4rem;
+}
+
+.numero_nota {
+    font-weight: 700;
+    font-size: 1.8rem;
+    color: var(--preto);
+}
+
+.estrela_dourada {
+    color: var(--amareloPrimary);
+    font-size: 1.8rem;
+}
+
+.total_votos {
+    font-size: 1.2rem;
+    color: #718096;
+    display: block;
+}
+
+/* ==========================================================================
+   TEMA ESCURO (DARK MODE)
+   ========================================================================== */
+
+body.dark-mode .fornecedores_busca,
+body.dark-mode .fornecedores_destaque {
+    background-color: #181a1b !important;
+    border-color: #313537 !important;
+    box-shadow: none !important;
+}
+
+body.dark-mode .fornecedores_busca h2, 
+body.dark-mode .fornecedores_destaque h2,
+body.dark-mode .form_group_fornecedores label,
+body.dark-mode .inputs_preco span,
+body.dark-mode .tabela_fornecedores tbody td,
+body.dark-mode .telefone_principal,
+body.dark-mode .numero_nota {
+    color: #ffffff !important;
+}
+
+body.dark-mode .form_group_fornecedores select,
+body.dark-mode .form_group_fornecedores input[type="text"],
+body.dark-mode .inputs_preco input {
+    background-color: #1c1e1f !important;
+    border-color: #313537 !important;
+    color: #ffffff !important;
+}
+
+body.dark-mode .tabela_fornecedores {
+    border-color: #313537 !important;
+}
+
+body.dark-mode .tabela_fornecedores thead th {
+    background-color: #242729 !important;
+    color: #ffffff !important;
+}
+
+body.dark-mode .tabela_fornecedores tbody td {
+    border-bottom-color: #242729 !important;
+}
+
+body.dark-mode .tabela_fornecedores tbody tr:nth-child(even) {
+    background-color: #202324 !important;
+}
+
+body.dark-mode .nome_loja_link {
+    color: #4da3ff !important;
+}
+
+body.dark-mode .caixa_whats_celulares {
+    background-color: #242729 !important;
+    border-color: #313537 !important;
+}
+
+body.dark-mode .numeros_celular {
+    color: #cbd5e0 !important;
+}
+
+body.dark-mode .total_votos,
+body.dark-mode .linha_email {
+    color: #a0aec0 !important;
+}
+
+body.dark-mode .btn_encontrar {
+    background-color: var(--azulM);
+}
+body.dark-mode .btn_encontrar:hover {
+    background-color: #4da3ff;
+}
+
+
+/* ==========================================================================
+   RESPONSIVIDADE DA TABELA
+   ========================================================================== */
+
+.fornecedores_destaque {
+    width: 100% !important;
+    max-width: 100% !important;
+    display: block !important;
+}
+
+.tabela_responsiva_container {
+    width: 100% !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch;
+    display: block !important;
+}
+
+.tabela_fornecedores {
+    width: 100% !important;
+    min-width: 900px !important;
+    table-layout: auto !important;
+}
+
+.tabela_fornecedores td, 
+.tabela_fornecedores th {
+    white-space: normal !important;
+}
+
+.col_fabricante   { width: 10% !important; min-width: 90px; }
+.col_modelo       { width: 15% !important; min-width: 130px; }
+.col_especificacao{ width: 35% !important; min-width: 250px; }
+.col_preco        { width: 15% !important; min-width: 120px; }
+.col_vendedor     { width: 15% !important; min-width: 120px; }
+.col_local        { width: 10% !important; min-width: 90px; }
